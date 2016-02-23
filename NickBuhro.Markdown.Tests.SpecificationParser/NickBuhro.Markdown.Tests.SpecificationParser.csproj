@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generating\CSharpGenerator.cs" />
+    <Compile Include="Generating\CSharpGeneratorImpl.cs" />
+    <Compile Include="Generating\CSharpGeneratorOptions.cs" />
+    <Compile Include="Generating\IGenerator.cs" />
     <Compile Include="Lexing\CompilationException.cs" />
     <Compile Include="Lexing\ILexer.cs" />
     <Compile Include="Lexing\Lexer.cs" />
@@ -61,9 +65,7 @@
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Generating\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
