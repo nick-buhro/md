@@ -49,6 +49,9 @@
     <Compile Include="Lexing\LexerEnumerator.cs" />
     <Compile Include="Lexing\Token.cs" />
     <Compile Include="Lexing\TokenType.cs" />
+    <Compile Include="Parsing\IParser.cs" />
+    <Compile Include="Parsing\Parser.cs" />
+    <Compile Include="Parsing\Syntax.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Generating\" />
-    <Folder Include="Parsing\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

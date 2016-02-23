@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Text;
-using NickBuhro.Markdown.Tests.SpecificationParser.Lexing;
+using NickBuhro.Markdown.Tests.SpecificationParser.Parsing;
 
 namespace NickBuhro.Markdown.Tests.SpecificationParser
 {
@@ -12,11 +12,9 @@ namespace NickBuhro.Markdown.Tests.SpecificationParser
         public static void Main()
         {
             var source = GetSource();
-            var lexer = new Lexer();
-            foreach (var token in lexer.Scan(source))
-            {
-                Console.WriteLine(token);
-            }
+            var parser = new Parser();
+            var ast = parser.Parse(source);
+
             Console.ReadKey();
         }
 
