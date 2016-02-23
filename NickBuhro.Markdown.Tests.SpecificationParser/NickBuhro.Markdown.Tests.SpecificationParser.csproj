@@ -44,8 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generating\CSharpGenerator.cs" />
-    <Compile Include="Generating\CSharpGeneratorImpl.cs" />
-    <Compile Include="Generating\CSharpGeneratorOptions.cs" />
+    <Compile Include="Generating\CSharpGeneratorStrategy.cs" />
+    <Compile Include="Generating\CustomStringBuilder.cs" />
     <Compile Include="Generating\IGenerator.cs" />
     <Compile Include="Lexing\CompilationException.cs" />
     <Compile Include="Lexing\ILexer.cs" />

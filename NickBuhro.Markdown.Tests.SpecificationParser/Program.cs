@@ -1,7 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Net;
 using System.Text;
-using NickBuhro.Markdown.Tests.SpecificationParser.Parsing;
+using NickBuhro.Markdown.Tests.SpecificationParser.Generating;
 
 namespace NickBuhro.Markdown.Tests.SpecificationParser
 {
@@ -12,9 +13,12 @@ namespace NickBuhro.Markdown.Tests.SpecificationParser
         public static void Main()
         {
             var source = GetSource();
-            var parser = new Parser();
-            var ast = parser.Parse(source);
+            
+            var gen = new CSharpGenerator();
+            var result = gen.Generate(source);
+            File.WriteAllText("Specification.generated.cs", result);
 
+            Console.WriteLine(result);
             Console.ReadKey();
         }
 

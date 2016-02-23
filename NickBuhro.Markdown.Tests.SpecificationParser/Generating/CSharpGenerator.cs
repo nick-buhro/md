@@ -5,7 +5,7 @@ namespace NickBuhro.Markdown.Tests.SpecificationParser.Generating
     internal sealed class CSharpGenerator: IGenerator
     {
         private readonly IParser _parser;
-
+        
         public CSharpGenerator()
             : this (new Parser()) { }
 
@@ -17,7 +17,7 @@ namespace NickBuhro.Markdown.Tests.SpecificationParser.Generating
         public string Generate(string source)
         {
             var ast = _parser.Parse(source);
-            var g = new CSharpGeneratorImpl(ast);
+            var g = new CSharpGeneratorStrategy(ast);
             return g.Generate();
         }
     }
