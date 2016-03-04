@@ -5417,7 +5417,7 @@ namespace NickBuhro.Markdown.Tests
         // 
         // 
         // 
-        // ## List items
+        // ## ListBlock items
         // 
         // A [list marker](@) is a
         // [bullet list marker] or an [ordered list marker].
@@ -5447,7 +5447,7 @@ namespace NickBuhro.Markdown.Tests
         // For example, let *Ls* be the lines
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example213()
         {
             // Source:
@@ -5467,7 +5467,7 @@ namespace NickBuhro.Markdown.Tests
             //     <p>A block quote.</p>
             //     </blockquote>
             
-            ExecuteExampleTest(213, "Container blocks - List items",
+            ExecuteExampleTest(213, "Container blocks - ListBlock items",
                 "A paragraph\r\nwith two lines.\r\n\r\n    indented code\r\n\r\n> A block quote.",
                 "<p>A paragraph\r\nwith two lines.</p>\r\n<pre><code>indented code\r\n</code></pre>\r\n<blockquote>\r\n<p>A block quote.</p>\r\n</blockquote>");
         }
@@ -5478,7 +5478,7 @@ namespace NickBuhro.Markdown.Tests
         // and the same contents as *Ls*:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example214()
         {
             // Source:
@@ -5502,7 +5502,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(214, "Container blocks - List items",
+            ExecuteExampleTest(214, "Container blocks - ListBlock items",
                 "1.  A paragraph\r\n    with two lines.\r\n\r\n        indented code\r\n\r\n    > A block quote.",
                 "<ol>\r\n<li>\r\n<p>A paragraph\r\nwith two lines.</p>\r\n<pre><code>indented code\r\n</code></pre>\r\n<blockquote>\r\n<p>A block quote.</p>\r\n</blockquote>\r\n</li>\r\n</ol>");
         }
@@ -5520,7 +5520,7 @@ namespace NickBuhro.Markdown.Tests
         // put under the list item:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example215()
         {
             // Source:
@@ -5534,14 +5534,14 @@ namespace NickBuhro.Markdown.Tests
             //     </ul>
             //     <p>two</p>
             
-            ExecuteExampleTest(215, "Container blocks - List items",
+            ExecuteExampleTest(215, "Container blocks - ListBlock items",
                 "- one\r\n\r\n two",
                 "<ul>\r\n<li>one</li>\r\n</ul>\r\n<p>two</p>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example216()
         {
             // Source:
@@ -5557,14 +5557,14 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(216, "Container blocks - List items",
+            ExecuteExampleTest(216, "Container blocks - ListBlock items",
                 "- one\r\n\r\n  two",
                 "<ul>\r\n<li>\r\n<p>one</p>\r\n<p>two</p>\r\n</li>\r\n</ul>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example217()
         {
             // Source:
@@ -5579,14 +5579,14 @@ namespace NickBuhro.Markdown.Tests
             //     <pre><code> two
             //     </code></pre>
             
-            ExecuteExampleTest(217, "Container blocks - List items",
+            ExecuteExampleTest(217, "Container blocks - ListBlock items",
                 " -    one\r\n\r\n     two",
                 "<ul>\r\n<li>one</li>\r\n</ul>\r\n<pre><code> two\r\n</code></pre>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example218()
         {
             // Source:
@@ -5602,7 +5602,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(218, "Container blocks - List items",
+            ExecuteExampleTest(218, "Container blocks - ListBlock items",
                 " -    one\r\n\r\n      two",
                 "<ul>\r\n<li>\r\n<p>one</p>\r\n<p>two</p>\r\n</li>\r\n</ul>");
         }
@@ -5617,7 +5617,7 @@ namespace NickBuhro.Markdown.Tests
         // this example:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example219()
         {
             // Source:
@@ -5637,7 +5637,7 @@ namespace NickBuhro.Markdown.Tests
             //     </blockquote>
             //     </blockquote>
             
-            ExecuteExampleTest(219, "Container blocks - List items",
+            ExecuteExampleTest(219, "Container blocks - ListBlock items",
                 "   > > 1.  one\r\n>>\r\n>>     two",
                 "<blockquote>\r\n<blockquote>\r\n<ol>\r\n<li>\r\n<p>one</p>\r\n<p>two</p>\r\n</li>\r\n</ol>\r\n</blockquote>\r\n</blockquote>");
         }
@@ -5653,7 +5653,7 @@ namespace NickBuhro.Markdown.Tests
         // far enough past the blockquote marker:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example220()
         {
             // Source:
@@ -5671,7 +5671,7 @@ namespace NickBuhro.Markdown.Tests
             //     </blockquote>
             //     </blockquote>
             
-            ExecuteExampleTest(220, "Container blocks - List items",
+            ExecuteExampleTest(220, "Container blocks - ListBlock items",
                 ">>- one\r\n>>\r\n  >  > two",
                 "<blockquote>\r\n<blockquote>\r\n<ul>\r\n<li>one</li>\r\n</ul>\r\n<p>two</p>\r\n</blockquote>\r\n</blockquote>");
         }
@@ -5681,7 +5681,7 @@ namespace NickBuhro.Markdown.Tests
         // any following content, so these are not list items:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example221()
         {
             // Source:
@@ -5693,7 +5693,7 @@ namespace NickBuhro.Markdown.Tests
             //     <p>-one</p>
             //     <p>2.two</p>
             
-            ExecuteExampleTest(221, "Container blocks - List items",
+            ExecuteExampleTest(221, "Container blocks - ListBlock items",
                 "-one\r\n\r\n2.two",
                 "<p>-one</p>\r\n<p>2.two</p>");
         }
@@ -5704,7 +5704,7 @@ namespace NickBuhro.Markdown.Tests
         // two blanks are contained in a [fenced code block].
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example222()
         {
             // Source:
@@ -5766,7 +5766,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(222, "Container blocks - List items",
+            ExecuteExampleTest(222, "Container blocks - ListBlock items",
                 "- foo\r\n\r\n  bar\r\n\r\n- foo\r\n\r\n\r\n  bar\r\n\r\n- ```\r\n  foo\r\n\r\n\r\n  bar\r\n  ```\r\n\r\n- baz\r\n\r\n  + ```\r\n    foo\r\n\r\n\r\n    bar\r\n    ```",
                 "<ul>\r\n<li>\r\n<p>foo</p>\r\n<p>bar</p>\r\n</li>\r\n<li>\r\n<p>foo</p>\r\n</li>\r\n</ul>\r\n<p>bar</p>\r\n<ul>\r\n<li>\r\n<pre><code>foo\r\n\r\n\r\nbar\r\n</code></pre>\r\n</li>\r\n<li>\r\n<p>baz</p>\r\n<ul>\r\n<li>\r\n<pre><code>foo\r\n\r\n\r\nbar\r\n</code></pre>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>");
         }
@@ -5775,7 +5775,7 @@ namespace NickBuhro.Markdown.Tests
         // A list item may contain any kind of block:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example223()
         {
             // Source:
@@ -5802,7 +5802,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(223, "Container blocks - List items",
+            ExecuteExampleTest(223, "Container blocks - ListBlock items",
                 "1.  foo\r\n\r\n    ```\r\n    bar\r\n    ```\r\n\r\n    baz\r\n\r\n    > bam",
                 "<ol>\r\n<li>\r\n<p>foo</p>\r\n<pre><code>bar\r\n</code></pre>\r\n<p>baz</p>\r\n<blockquote>\r\n<p>bam</p>\r\n</blockquote>\r\n</li>\r\n</ol>");
         }
@@ -5814,7 +5814,7 @@ namespace NickBuhro.Markdown.Tests
         // blank lines end the list):
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example224()
         {
             // Source:
@@ -5835,14 +5835,14 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(224, "Container blocks - List items",
+            ExecuteExampleTest(224, "Container blocks - ListBlock items",
                 "- Foo\r\n\r\n      bar\r\n\r\n      baz",
                 "<ul>\r\n<li>\r\n<p>Foo</p>\r\n<pre><code>bar\r\n\r\nbaz\r\n</code></pre>\r\n</li>\r\n</ul>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example225()
         {
             // Source:
@@ -5864,7 +5864,7 @@ namespace NickBuhro.Markdown.Tests
             //     <pre><code>  baz
             //     </code></pre>
             
-            ExecuteExampleTest(225, "Container blocks - List items",
+            ExecuteExampleTest(225, "Container blocks - ListBlock items",
                 "- Foo\r\n\r\n      bar\r\n\r\n\r\n      baz",
                 "<ul>\r\n<li>\r\n<p>Foo</p>\r\n<pre><code>bar\r\n</code></pre>\r\n</li>\r\n</ul>\r\n<pre><code>  baz\r\n</code></pre>");
         }
@@ -5873,7 +5873,7 @@ namespace NickBuhro.Markdown.Tests
         // Note that ordered list start numbers must be nine digits or less:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example226()
         {
             // Source:
@@ -5884,14 +5884,14 @@ namespace NickBuhro.Markdown.Tests
             //     <li>ok</li>
             //     </ol>
             
-            ExecuteExampleTest(226, "Container blocks - List items",
+            ExecuteExampleTest(226, "Container blocks - ListBlock items",
                 "123456789. ok",
                 "<ol start=\"123456789\">\r\n<li>ok</li>\r\n</ol>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example227()
         {
             // Source:
@@ -5900,7 +5900,7 @@ namespace NickBuhro.Markdown.Tests
             // Expected result:
             //     <p>1234567890. not ok</p>
             
-            ExecuteExampleTest(227, "Container blocks - List items",
+            ExecuteExampleTest(227, "Container blocks - ListBlock items",
                 "1234567890. not ok",
                 "<p>1234567890. not ok</p>");
         }
@@ -5909,7 +5909,7 @@ namespace NickBuhro.Markdown.Tests
         // A start number may begin with 0s:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example228()
         {
             // Source:
@@ -5920,14 +5920,14 @@ namespace NickBuhro.Markdown.Tests
             //     <li>ok</li>
             //     </ol>
             
-            ExecuteExampleTest(228, "Container blocks - List items",
+            ExecuteExampleTest(228, "Container blocks - ListBlock items",
                 "0. ok",
                 "<ol start=\"0\">\r\n<li>ok</li>\r\n</ol>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example229()
         {
             // Source:
@@ -5938,7 +5938,7 @@ namespace NickBuhro.Markdown.Tests
             //     <li>ok</li>
             //     </ol>
             
-            ExecuteExampleTest(229, "Container blocks - List items",
+            ExecuteExampleTest(229, "Container blocks - ListBlock items",
                 "003. ok",
                 "<ol start=\"3\">\r\n<li>ok</li>\r\n</ol>");
         }
@@ -5947,7 +5947,7 @@ namespace NickBuhro.Markdown.Tests
         // A start number may not be negative:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example230()
         {
             // Source:
@@ -5956,7 +5956,7 @@ namespace NickBuhro.Markdown.Tests
             // Expected result:
             //     <p>-1. not ok</p>
             
-            ExecuteExampleTest(230, "Container blocks - List items",
+            ExecuteExampleTest(230, "Container blocks - ListBlock items",
                 "-1. not ok",
                 "<p>-1. not ok</p>");
         }
@@ -5980,7 +5980,7 @@ namespace NickBuhro.Markdown.Tests
         // In the following case that is 6 spaces:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example231()
         {
             // Source:
@@ -5997,7 +5997,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(231, "Container blocks - List items",
+            ExecuteExampleTest(231, "Container blocks - ListBlock items",
                 "- foo\r\n\r\n      bar",
                 "<ul>\r\n<li>\r\n<p>foo</p>\r\n<pre><code>bar\r\n</code></pre>\r\n</li>\r\n</ul>");
         }
@@ -6006,7 +6006,7 @@ namespace NickBuhro.Markdown.Tests
         // And in this case it is 11 spaces:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example232()
         {
             // Source:
@@ -6023,7 +6023,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(232, "Container blocks - List items",
+            ExecuteExampleTest(232, "Container blocks - ListBlock items",
                 "  10.  foo\r\n\r\n           bar",
                 "<ol start=\"10\">\r\n<li>\r\n<p>foo</p>\r\n<pre><code>bar\r\n</code></pre>\r\n</li>\r\n</ol>");
         }
@@ -6034,7 +6034,7 @@ namespace NickBuhro.Markdown.Tests
         // list marker:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example233()
         {
             // Source:
@@ -6051,14 +6051,14 @@ namespace NickBuhro.Markdown.Tests
             //     <pre><code>more code
             //     </code></pre>
             
-            ExecuteExampleTest(233, "Container blocks - List items",
+            ExecuteExampleTest(233, "Container blocks - ListBlock items",
                 "    indented code\r\n\r\nparagraph\r\n\r\n    more code",
                 "<pre><code>indented code\r\n</code></pre>\r\n<p>paragraph</p>\r\n<pre><code>more code\r\n</code></pre>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example234()
         {
             // Source:
@@ -6079,7 +6079,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(234, "Container blocks - List items",
+            ExecuteExampleTest(234, "Container blocks - ListBlock items",
                 "1.     indented code\r\n\r\n   paragraph\r\n\r\n       more code",
                 "<ol>\r\n<li>\r\n<pre><code>indented code\r\n</code></pre>\r\n<p>paragraph</p>\r\n<pre><code>more code\r\n</code></pre>\r\n</li>\r\n</ol>");
         }
@@ -6089,7 +6089,7 @@ namespace NickBuhro.Markdown.Tests
         // inside the code block:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example235()
         {
             // Source:
@@ -6110,7 +6110,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(235, "Container blocks - List items",
+            ExecuteExampleTest(235, "Container blocks - ListBlock items",
                 "1.      indented code\r\n\r\n   paragraph\r\n\r\n       more code",
                 "<ol>\r\n<li>\r\n<pre><code> indented code\r\n</code></pre>\r\n<p>paragraph</p>\r\n<pre><code>more code\r\n</code></pre>\r\n</li>\r\n</ol>");
         }
@@ -6125,7 +6125,7 @@ namespace NickBuhro.Markdown.Tests
         // indenting the whole thing and prepending a list marker:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example236()
         {
             // Source:
@@ -6137,14 +6137,14 @@ namespace NickBuhro.Markdown.Tests
             //     <p>foo</p>
             //     <p>bar</p>
             
-            ExecuteExampleTest(236, "Container blocks - List items",
+            ExecuteExampleTest(236, "Container blocks - ListBlock items",
                 "   foo\r\n\r\nbar",
                 "<p>foo</p>\r\n<p>bar</p>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example237()
         {
             // Source:
@@ -6158,7 +6158,7 @@ namespace NickBuhro.Markdown.Tests
             //     </ul>
             //     <p>bar</p>
             
-            ExecuteExampleTest(237, "Container blocks - List items",
+            ExecuteExampleTest(237, "Container blocks - ListBlock items",
                 "-    foo\r\n\r\n  bar",
                 "<ul>\r\n<li>foo</li>\r\n</ul>\r\n<p>bar</p>");
         }
@@ -6170,7 +6170,7 @@ namespace NickBuhro.Markdown.Tests
         // the above case:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example238()
         {
             // Source:
@@ -6186,7 +6186,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(238, "Container blocks - List items",
+            ExecuteExampleTest(238, "Container blocks - ListBlock items",
                 "-  foo\r\n\r\n   bar",
                 "<ul>\r\n<li>\r\n<p>foo</p>\r\n<p>bar</p>\r\n</li>\r\n</ul>");
         }
@@ -6207,7 +6207,7 @@ namespace NickBuhro.Markdown.Tests
         // Here are some list items that start with a blank line but are not empty:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example239()
         {
             // Source:
@@ -6233,7 +6233,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(239, "Container blocks - List items",
+            ExecuteExampleTest(239, "Container blocks - ListBlock items",
                 "-\r\n  foo\r\n-\r\n  ```\r\n  bar\r\n  ```\r\n-\r\n      baz",
                 "<ul>\r\n<li>foo</li>\r\n<li>\r\n<pre><code>bar\r\n</code></pre>\r\n</li>\r\n<li>\r\n<pre><code>baz\r\n</code></pre>\r\n</li>\r\n</ul>");
         }
@@ -6244,7 +6244,7 @@ namespace NickBuhro.Markdown.Tests
         // item:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example240()
         {
             // Source:
@@ -6258,7 +6258,7 @@ namespace NickBuhro.Markdown.Tests
             //     </ul>
             //     <p>foo</p>
             
-            ExecuteExampleTest(240, "Container blocks - List items",
+            ExecuteExampleTest(240, "Container blocks - ListBlock items",
                 "-\r\n\r\n  foo",
                 "<ul>\r\n<li></li>\r\n</ul>\r\n<p>foo</p>");
         }
@@ -6267,7 +6267,7 @@ namespace NickBuhro.Markdown.Tests
         // Here is an empty bullet list item:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example241()
         {
             // Source:
@@ -6282,7 +6282,7 @@ namespace NickBuhro.Markdown.Tests
             //     <li>bar</li>
             //     </ul>
             
-            ExecuteExampleTest(241, "Container blocks - List items",
+            ExecuteExampleTest(241, "Container blocks - ListBlock items",
                 "- foo\r\n-\r\n- bar",
                 "<ul>\r\n<li>foo</li>\r\n<li></li>\r\n<li>bar</li>\r\n</ul>");
         }
@@ -6291,7 +6291,7 @@ namespace NickBuhro.Markdown.Tests
         // It does not matter whether there are spaces following the [list marker]:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example242()
         {
             // Source:
@@ -6306,7 +6306,7 @@ namespace NickBuhro.Markdown.Tests
             //     <li>bar</li>
             //     </ul>
             
-            ExecuteExampleTest(242, "Container blocks - List items",
+            ExecuteExampleTest(242, "Container blocks - ListBlock items",
                 "- foo\r\n-   \r\n- bar",
                 "<ul>\r\n<li>foo</li>\r\n<li></li>\r\n<li>bar</li>\r\n</ul>");
         }
@@ -6315,7 +6315,7 @@ namespace NickBuhro.Markdown.Tests
         // Here is an empty ordered list item:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example243()
         {
             // Source:
@@ -6330,7 +6330,7 @@ namespace NickBuhro.Markdown.Tests
             //     <li>bar</li>
             //     </ol>
             
-            ExecuteExampleTest(243, "Container blocks - List items",
+            ExecuteExampleTest(243, "Container blocks - ListBlock items",
                 "1. foo\r\n2.\r\n3. bar",
                 "<ol>\r\n<li>foo</li>\r\n<li></li>\r\n<li>bar</li>\r\n</ol>");
         }
@@ -6339,7 +6339,7 @@ namespace NickBuhro.Markdown.Tests
         // A list may start or end with an empty list item:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example244()
         {
             // Source:
@@ -6350,7 +6350,7 @@ namespace NickBuhro.Markdown.Tests
             //     <li></li>
             //     </ul>
             
-            ExecuteExampleTest(244, "Container blocks - List items",
+            ExecuteExampleTest(244, "Container blocks - ListBlock items",
                 "*",
                 "<ul>\r\n<li></li>\r\n</ul>");
         }
@@ -6366,7 +6366,7 @@ namespace NickBuhro.Markdown.Tests
         // Indented one space:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example245()
         {
             // Source:
@@ -6390,7 +6390,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(245, "Container blocks - List items",
+            ExecuteExampleTest(245, "Container blocks - ListBlock items",
                 " 1.  A paragraph\r\n     with two lines.\r\n\r\n         indented code\r\n\r\n     > A block quote.",
                 "<ol>\r\n<li>\r\n<p>A paragraph\r\nwith two lines.</p>\r\n<pre><code>indented code\r\n</code></pre>\r\n<blockquote>\r\n<p>A block quote.</p>\r\n</blockquote>\r\n</li>\r\n</ol>");
         }
@@ -6399,7 +6399,7 @@ namespace NickBuhro.Markdown.Tests
         // Indented two spaces:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example246()
         {
             // Source:
@@ -6423,7 +6423,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(246, "Container blocks - List items",
+            ExecuteExampleTest(246, "Container blocks - ListBlock items",
                 "  1.  A paragraph\r\n      with two lines.\r\n\r\n          indented code\r\n\r\n      > A block quote.",
                 "<ol>\r\n<li>\r\n<p>A paragraph\r\nwith two lines.</p>\r\n<pre><code>indented code\r\n</code></pre>\r\n<blockquote>\r\n<p>A block quote.</p>\r\n</blockquote>\r\n</li>\r\n</ol>");
         }
@@ -6432,7 +6432,7 @@ namespace NickBuhro.Markdown.Tests
         // Indented three spaces:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example247()
         {
             // Source:
@@ -6456,7 +6456,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(247, "Container blocks - List items",
+            ExecuteExampleTest(247, "Container blocks - ListBlock items",
                 "   1.  A paragraph\r\n       with two lines.\r\n\r\n           indented code\r\n\r\n       > A block quote.",
                 "<ol>\r\n<li>\r\n<p>A paragraph\r\nwith two lines.</p>\r\n<pre><code>indented code\r\n</code></pre>\r\n<blockquote>\r\n<p>A block quote.</p>\r\n</blockquote>\r\n</li>\r\n</ol>");
         }
@@ -6465,7 +6465,7 @@ namespace NickBuhro.Markdown.Tests
         // Four spaces indent gives a code block:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example248()
         {
             // Source:
@@ -6485,7 +6485,7 @@ namespace NickBuhro.Markdown.Tests
             //         &gt; A block quote.
             //     </code></pre>
             
-            ExecuteExampleTest(248, "Container blocks - List items",
+            ExecuteExampleTest(248, "Container blocks - ListBlock items",
                 "    1.  A paragraph\r\n        with two lines.\r\n\r\n            indented code\r\n\r\n        > A block quote.",
                 "<pre><code>1.  A paragraph\r\n    with two lines.\r\n\r\n        indented code\r\n\r\n    &gt; A block quote.\r\n</code></pre>");
         }
@@ -6504,7 +6504,7 @@ namespace NickBuhro.Markdown.Tests
         // Here is an example with [lazy continuation lines]:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example249()
         {
             // Source:
@@ -6528,7 +6528,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(249, "Container blocks - List items",
+            ExecuteExampleTest(249, "Container blocks - ListBlock items",
                 "  1.  A paragraph\r\nwith two lines.\r\n\r\n          indented code\r\n\r\n      > A block quote.",
                 "<ol>\r\n<li>\r\n<p>A paragraph\r\nwith two lines.</p>\r\n<pre><code>indented code\r\n</code></pre>\r\n<blockquote>\r\n<p>A block quote.</p>\r\n</blockquote>\r\n</li>\r\n</ol>");
         }
@@ -6537,7 +6537,7 @@ namespace NickBuhro.Markdown.Tests
         // Indentation can be partially deleted:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example250()
         {
             // Source:
@@ -6550,7 +6550,7 @@ namespace NickBuhro.Markdown.Tests
             //     with two lines.</li>
             //     </ol>
             
-            ExecuteExampleTest(250, "Container blocks - List items",
+            ExecuteExampleTest(250, "Container blocks - ListBlock items",
                 "  1.  A paragraph\r\n    with two lines.",
                 "<ol>\r\n<li>A paragraph\r\nwith two lines.</li>\r\n</ol>");
         }
@@ -6559,7 +6559,7 @@ namespace NickBuhro.Markdown.Tests
         // These examples show how laziness can work in nested structures:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example251()
         {
             // Source:
@@ -6578,14 +6578,14 @@ namespace NickBuhro.Markdown.Tests
             //     </ol>
             //     </blockquote>
             
-            ExecuteExampleTest(251, "Container blocks - List items",
+            ExecuteExampleTest(251, "Container blocks - ListBlock items",
                 "> 1. > Blockquote\r\ncontinued here.",
                 "<blockquote>\r\n<ol>\r\n<li>\r\n<blockquote>\r\n<p>Blockquote\r\ncontinued here.</p>\r\n</blockquote>\r\n</li>\r\n</ol>\r\n</blockquote>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example252()
         {
             // Source:
@@ -6604,7 +6604,7 @@ namespace NickBuhro.Markdown.Tests
             //     </ol>
             //     </blockquote>
             
-            ExecuteExampleTest(252, "Container blocks - List items",
+            ExecuteExampleTest(252, "Container blocks - ListBlock items",
                 "> 1. > Blockquote\r\n> continued here.",
                 "<blockquote>\r\n<ol>\r\n<li>\r\n<blockquote>\r\n<p>Blockquote\r\ncontinued here.</p>\r\n</blockquote>\r\n</li>\r\n</ol>\r\n</blockquote>");
         }
@@ -6621,7 +6621,7 @@ namespace NickBuhro.Markdown.Tests
         // So, in this case we need two spaces indent:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example253()
         {
             // Source:
@@ -6642,7 +6642,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(253, "Container blocks - List items",
+            ExecuteExampleTest(253, "Container blocks - ListBlock items",
                 "- foo\r\n  - bar\r\n    - baz",
                 "<ul>\r\n<li>foo\r\n<ul>\r\n<li>bar\r\n<ul>\r\n<li>baz</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>");
         }
@@ -6651,7 +6651,7 @@ namespace NickBuhro.Markdown.Tests
         // One is not enough:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example254()
         {
             // Source:
@@ -6666,7 +6666,7 @@ namespace NickBuhro.Markdown.Tests
             //     <li>baz</li>
             //     </ul>
             
-            ExecuteExampleTest(254, "Container blocks - List items",
+            ExecuteExampleTest(254, "Container blocks - ListBlock items",
                 "- foo\r\n - bar\r\n  - baz",
                 "<ul>\r\n<li>foo</li>\r\n<li>bar</li>\r\n<li>baz</li>\r\n</ul>");
         }
@@ -6675,7 +6675,7 @@ namespace NickBuhro.Markdown.Tests
         // Here we need four, because the list marker is wider:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example255()
         {
             // Source:
@@ -6691,7 +6691,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(255, "Container blocks - List items",
+            ExecuteExampleTest(255, "Container blocks - ListBlock items",
                 "10) foo\r\n    - bar",
                 "<ol start=\"10\">\r\n<li>foo\r\n<ul>\r\n<li>bar</li>\r\n</ul>\r\n</li>\r\n</ol>");
         }
@@ -6700,7 +6700,7 @@ namespace NickBuhro.Markdown.Tests
         // Three is not enough:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example256()
         {
             // Source:
@@ -6715,7 +6715,7 @@ namespace NickBuhro.Markdown.Tests
             //     <li>bar</li>
             //     </ul>
             
-            ExecuteExampleTest(256, "Container blocks - List items",
+            ExecuteExampleTest(256, "Container blocks - ListBlock items",
                 "10) foo\r\n   - bar",
                 "<ol start=\"10\">\r\n<li>foo</li>\r\n</ol>\r\n<ul>\r\n<li>bar</li>\r\n</ul>");
         }
@@ -6724,7 +6724,7 @@ namespace NickBuhro.Markdown.Tests
         // A list may be the first block in a list item:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example257()
         {
             // Source:
@@ -6739,14 +6739,14 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ul>
             
-            ExecuteExampleTest(257, "Container blocks - List items",
+            ExecuteExampleTest(257, "Container blocks - ListBlock items",
                 "- - foo",
                 "<ul>\r\n<li>\r\n<ul>\r\n<li>foo</li>\r\n</ul>\r\n</li>\r\n</ul>");
         }
         // 
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example258()
         {
             // Source:
@@ -6765,7 +6765,7 @@ namespace NickBuhro.Markdown.Tests
             //     </li>
             //     </ol>
             
-            ExecuteExampleTest(258, "Container blocks - List items",
+            ExecuteExampleTest(258, "Container blocks - ListBlock items",
                 "1. - 2. foo",
                 "<ol>\r\n<li>\r\n<ul>\r\n<li>\r\n<ol start=\"2\">\r\n<li>foo</li>\r\n</ol>\r\n</li>\r\n</ul>\r\n</li>\r\n</ol>");
         }
@@ -6774,7 +6774,7 @@ namespace NickBuhro.Markdown.Tests
         // A list item can contain a heading:
         // 
         [TestMethod]
-        [TestCategory("Container blocks - List items")]
+        [TestCategory("Container blocks - ListBlock items")]
         public void Example259()
         {
             // Source:
@@ -6793,7 +6793,7 @@ namespace NickBuhro.Markdown.Tests
             //     baz</li>
             //     </ul>
             
-            ExecuteExampleTest(259, "Container blocks - List items",
+            ExecuteExampleTest(259, "Container blocks - ListBlock items",
                 "- # Foo\r\n- Bar\r\n  ---\r\n  baz",
                 "<ul>\r\n<li>\r\n<h1>Foo</h1>\r\n</li>\r\n<li>\r\n<h2>Bar</h2>\r\nbaz</li>\r\n</ul>");
         }
@@ -6803,14 +6803,14 @@ namespace NickBuhro.Markdown.Tests
         // 
         // John Gruber's Markdown spec says the following about list items:
         // 
-        // 1. "List markers typically start at the left margin, but may be indented
-        //    by up to three spaces. List markers must be followed by one or more
+        // 1. "ListBlock markers typically start at the left margin, but may be indented
+        //    by up to three spaces. ListBlock markers must be followed by one or more
         //    spaces or a tab."
         // 
         // 2. "To make lists look nice, you can wrap items with hanging indents....
         //    But if you don't want to, you don't have to."
         // 
-        // 3. "List items may consist of multiple paragraphs. Each subsequent
+        // 3. "ListBlock items may consist of multiple paragraphs. Each subsequent
         //    paragraph in a list item must be indented by either 4 spaces or one
         //    tab."
         // 
@@ -7333,7 +7333,7 @@ namespace NickBuhro.Markdown.Tests
         }
         // 
         // 
-        // List items need not be indented to the same level.  The following
+        // ListBlock items need not be indented to the same level.  The following
         // list items will be treated as items at the same list level,
         // since none is indented enough to belong to the previous list
         // item:
