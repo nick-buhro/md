@@ -1,14 +1,24 @@
 ﻿namespace NickBuhro.Markdown.Syntax
 {
-    public abstract class HeadingLeafBlock: LeafBlock
+    public abstract class HeadingLeafBlock: LeafBlock { }
+
+
+
+    public sealed class AtxHeadingLeafBlock : HeadingLeafBlock
     {
         public override string ToString()
         {
-            return "heading";
+            return "atx_heading";
         }
     }
 
-    public sealed class AtxHeadingLeafBlock: HeadingLeafBlock { }
 
-    public sealed class SetextHeadingLeafBlock: HeadingLeafBlock { }
+
+    public sealed class SetextHeadingLeafBlock : HeadingLeafBlock
+    {
+        public override string ToString()
+        {
+            return "setext_heading";
+        }
+    }
 }

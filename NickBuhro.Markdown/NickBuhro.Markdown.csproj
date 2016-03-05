@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\IGenerator.cs" />
+    <Compile Include="Backend\SyntaxTreeGenerator.RecursiveImpl.cs" />
     <Compile Include="Backend\SyntaxTreeGenerator.cs" />
     <Compile Include="Frontend\IParser.cs" />
+    <Compile Include="Frontend\SyntaxTreeParser.cs" />
     <Compile Include="ICompiler.cs" />
     <Compile Include="Syntax\HtmlInline.cs" />
     <Compile Include="Syntax\HtmlLeafBlock.cs" />

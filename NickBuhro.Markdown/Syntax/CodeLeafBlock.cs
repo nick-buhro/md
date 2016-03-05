@@ -2,13 +2,22 @@
 {
     public abstract class CodeLeafBlock: LeafBlock
     {
+        
+    }
+
+    public sealed class IndentedCodeLeafBlock : CodeLeafBlock
+    {
         public override string ToString()
         {
-            return "code_block";
+            return "indented_code";
         }
     }
 
-    public sealed class IndentedCodeLeafBlock: CodeLeafBlock { }
-
-    public sealed class FencedCodeLeafBlock: CodeLeafBlock { }
+    public sealed class FencedCodeLeafBlock : CodeLeafBlock
+    {
+        public override string ToString()
+        {
+            return "fenced_code";
+        }
+    }
 }

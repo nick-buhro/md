@@ -1,6 +1,12 @@
 ﻿namespace NickBuhro.Markdown.Syntax
 {
-    public abstract class LinkInline: Inline { }
+    public abstract class LinkInline : Inline
+    {
+        public override string ToString()
+        {
+            return "link";
+        }
+    }
 
     public sealed class InlineLinkInline: LinkInline { }
 

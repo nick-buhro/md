@@ -1,14 +1,24 @@
 ﻿namespace NickBuhro.Markdown.Syntax
 {
-    public abstract class EmphasisInline: Inline
+    public abstract class EmphasisInline: Inline { }
+
+
+
+    public sealed class NormalEmphasisInline : EmphasisInline
     {
         public override string ToString()
         {
-            return "emphasis";
+            return "emph";
         }
     }
 
-    public sealed class NormalEmphasisInline: EmphasisInline { }
 
-    public sealed class StrongEmphasisInline: EmphasisInline { }
+
+    public sealed class StrongEmphasisInline : EmphasisInline
+    {
+        public override string ToString()
+        {
+            return "strong";
+        }
+    }
 }
