@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43ADDB9C-F4DE-4392-9880-46C9926D8B36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NickBuhro.Markdown</RootNamespace>
+    <AssemblyName>NickBuhro.Markdown</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backend\IGenerator.cs" />
+    <Compile Include="Backend\SyntaxTreeGenerator.RecursiveImpl.cs" />
+    <Compile Include="Backend\SyntaxTreeGenerator.cs" />
+    <Compile Include="Frontend\IParser.cs" />
+    <Compile Include="Frontend\SyntaxTreeParser.cs" />
+    <Compile Include="ICompiler.cs" />
+    <Compile Include="Syntax\HtmlInline.cs" />
+    <Compile Include="Syntax\HtmlLeafBlock.cs" />
+    <Compile Include="Syntax\ImageInline.cs" />
+    <Compile Include="Syntax\ThematicBreakLeafBlock.cs" />
+    <Compile Include="Syntax\LeafBlock.cs" />
+    <Compile Include="Syntax\HeadingLeafBlock.cs" />
+    <Compile Include="Syntax\QuoteContainerBlock.cs" />
+    <Compile Include="Syntax\ContainerBlock.cs" />
+    <Compile Include="Syntax\Inline.cs" />
+    <Compile Include="Syntax\CodeInline.cs" />
+    <Compile Include="Syntax\EmphasisInline.cs" />
+    <Compile Include="Syntax\LinkInline.cs" />
+    <Compile Include="Syntax\Element.cs" />
+    <Compile Include="Syntax\Block.cs" />
+    <Compile Include="Syntax\CodeLeafBlock.cs" />
+    <Compile Include="Syntax\Document.cs" />
+    <Compile Include="Syntax\ListContainerBlock.cs" />
+    <Compile Include="Syntax\ListItemContainerBlock.cs" />
+    <Compile Include="Syntax\ParagraphLeafBlock.cs" />
+    <Compile Include="Syntax\LineBreakInline.cs" />
+    <Compile Include="Syntax\TextInline.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="Syntax\_Syntax.xmind" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
