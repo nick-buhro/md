@@ -8,7 +8,7 @@ namespace NickBuhro.Markdown.Frontend
     {
         public Document Parse(TextReader source)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }
